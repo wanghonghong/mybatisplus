@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.joywise.mybatisplus.mapper.TUserMapper">
+
+    <select id="selectList" resultType="java.util.Map">
+        select * FROM t_user
+    </select>
+    <select id="getUser" resultType="net.joywise.mybatisplus.model.TUser">
+        SELECT * FROM t_user where userId = #{userId} limit 1
+    </select>
+
+</mapper>
